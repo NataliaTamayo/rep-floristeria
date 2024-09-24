@@ -1,4 +1,4 @@
-package com.example.Iniciandospring.Controller;
+package com.example.Floristeriasprinboot.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

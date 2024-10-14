@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-IniciandospringApplication<Iniciandospring>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.Floristeriaspringboot.IniciandospringApplication",
+            "projectName": "Iniciandospring",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

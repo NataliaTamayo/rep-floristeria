@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Entregas</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listado de Entregas</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Dirección</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Pedido ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:if="${entregas.isEmpty()}">
+                <td colspan="5">No hay entregas  disponibles.</td>
+            <tr th:each="entrega : ${entregas}">
+                <td th:text="${entrega.id}"></td>
+                <td th:text="${entrega.direccionEntrega}"></td>
+                <td th:text="${entrega.fechaEntrega}"></td>
+                <td th:text="${entrega.estadoEntrega}"></td>
+                <td th:text="${entrega.pedidoId}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

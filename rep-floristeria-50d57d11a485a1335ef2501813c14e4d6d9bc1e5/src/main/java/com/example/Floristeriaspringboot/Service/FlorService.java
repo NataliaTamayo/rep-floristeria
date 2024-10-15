@@ -2,7 +2,6 @@ package com.example.Floristeriaspringboot.Service;
 
 import com.example.Floristeriaspringboot.Entities.FlorEntity;
 import com.example.Floristeriaspringboot.Repository.FlorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,7 @@ public class FlorService {
 
     private final FlorRepository florRepository;
 
-    @Autowired
+
     public FlorService(FlorRepository florRepository) {
         this.florRepository = florRepository;
     }

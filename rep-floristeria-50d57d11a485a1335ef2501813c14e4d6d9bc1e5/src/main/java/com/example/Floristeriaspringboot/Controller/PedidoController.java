@@ -38,13 +38,10 @@ public class PedidoController {
 
     @PostMapping("/guardar")
     public String guardarPedido(@ModelAttribute("pedido") PedidoEntity pedido, Model model) {
-        try {
+        
             pedidoService.addPedido(pedido);
             return "redirect:/pedidos/listar"; // Redirigir a la lista de pedidos
-        } catch (Exception e) {
-            model.addAttribute("error", "Ocurrió un error al guardar el pedido.");
-            return "pedidos_registrar"; // Volver al formulario en caso de error
-        }
+       
     }
 
     @GetMapping("/editar/{id}")
